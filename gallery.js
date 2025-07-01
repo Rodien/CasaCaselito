@@ -74,7 +74,6 @@ function renderGalleryCarousel() {
 
 document.addEventListener('DOMContentLoaded', () => {
   renderGalleryGrid();
-  renderGalleryCarousel();
   // Gallery tab filter
   document.querySelectorAll('.gallery-tabs .btn').forEach(btn => {
     btn.addEventListener('click', function() {
