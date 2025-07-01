@@ -72,25 +72,16 @@ section {
 }
 .gallery-tabs {
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
   margin-bottom: 1em;
+  flex-wrap: wrap;
 }
 .tab {
-  background: #e0e0e0;
-  border: none;
-  border-radius: 20px;
-  padding: 0.5em 1.2em;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background 0.2s;
-}
-.tab.active, .tab:hover {
-  background: #1a4d2e;
-  color: #fff;
+  display: none;
 }
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1em;
 }
 .gallery-grid img {
