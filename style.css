@@ -1,0 +1,201 @@
+/* Modern, clean, responsive styles for Casa Caselito */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+}
+.hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 1;
+  filter: brightness(0.7);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 90vw;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+.btn {
+  display: inline-block;
+  margin: 0.5em 0.5em 0 0;
+  padding: 0.7em 1.5em;
+  background: #fff;
+  color: #1a4d2e;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.btn.primary {
+  background: #1a4d2e;
+  color: #fff;
+}
+.btn:hover {
+  background: #e0e0e0;
+}
+.btn.primary:hover {
+  background: #145c2e;
+}
+main {
+  max-width: 1100px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+section {
+  margin-bottom: 3em;
+}
+#gallery h2, #about h2, #location h2, #reviews h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #1a4d2e;
+}
+.gallery-tabs {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.tab {
+  background: #e0e0e0;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.tab.active, .tab:hover {
+  background: #1a4d2e;
+  color: #fff;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1em;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  object-fit: cover;
+  height: 180px;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.about-text {
+  flex: 2;
+}
+.amenities {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+  margin: 1em 0;
+}
+.amenities li {
+  margin-bottom: 0.5em;
+  padding-left: 1em;
+  position: relative;
+}
+.amenities li:before {
+  content: '✔';
+  color: #1a4d2e;
+  position: absolute;
+  left: 0;
+}
+.map-container {
+  width: 100%;
+  height: 320px;
+  margin-bottom: 1.5em;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.nearby {
+  margin-top: 1em;
+}
+.attractions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  list-style: none;
+  padding: 0;
+}
+.attractions li {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  padding: 0.7em 1em;
+  min-width: 220px;
+  flex: 1 1 220px;
+}
+.attractions img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+.reviews blockquote {
+  background: #fff;
+  border-left: 4px solid #1a4d2e;
+  margin: 0;
+  padding: 1em 1.5em;
+  border-radius: 8px;
+  font-style: italic;
+  flex: 1 1 250px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.reviews span {
+  display: block;
+  margin-top: 0.5em;
+  color: #888;
+  font-size: 0.95em;
+}
+footer {
+  text-align: center;
+  padding: 2em 0 1em 0;
+  color: #888;
+  font-size: 1em;
+}
+@media (max-width: 700px) {
+  .hero h1 { font-size: 1.5rem; }
+  .about-content { flex-direction: column; }
+  .gallery-grid img { height: 120px; }
+  .attractions li { flex-direction: column; align-items: flex-start; }
+  .attractions img { width: 100%; height: 80px; }
+}
